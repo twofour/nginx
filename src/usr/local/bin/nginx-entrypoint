@@ -1,0 +1,13 @@
+#!/bin/sh
+
+sed -i "s#\$NGINX_RESOLVERS#$NGINX_RESOLVERS#g" /etc/nginx/conf.d/*
+sed -i "s#\$NGINX_RESOLVER_VALID#$NGINX_RESOLVER_VALID#g" /etc/nginx/conf.d/*
+sed -i "s#\$NGINX_RESOLVER_TIMEOUT#$NGINX_RESOLVER_TIMEOUT#g" /etc/nginx/conf.d/*
+sed -i "s#\$NGINX_PROXY_CACHE_SIZE#$NGINX_PROXY_CACHE_SIZE#g" /etc/nginx/conf.d/*
+sed -i "s#\$NGINX_PROXY_CACHE_INACTIVE#$NGINX_PROXY_CACHE_INACTIVE#g" /etc/nginx/conf.d/*
+sed -i "s#\$NGINX_CLIENT_BODY_SIZE_MAX#$NGINX_CLIENT_BODY_SIZE_MAX#g" /etc/nginx/nginx.conf
+sed -i "s#\$NGINX_PROXY_READ_TIMEOUT#$NGINX_PROXY_READ_TIMEOUT#g" /etc/nginx/conf.d/*
+sed -i "s#\$NGINX_PROXY_SEND_TIMEOUT#$NGINX_PROXY_SEND_TIMEOUT#g" /etc/nginx/conf.d/*
+sed -i "s#\$NGINX_SEND_TIMEOUT#$NGINX_SEND_TIMEOUT#g" /etc/nginx/nginx.conf
+
+exec "$@"

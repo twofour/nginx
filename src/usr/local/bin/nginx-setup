@@ -1,0 +1,10 @@
+#!/bin/sh
+set -e
+apk add --no-cache --clean-protected nginx=~$NGINX_VERSION
+mkdir /run/nginx
+
+ln -s /dev/stdout /var/log/nginx/access.log
+ln -s /dev/stderr /var/log/nginx/error.log
+
+rm -rf /var/www/*
+mkdir -p /var/www/html/htdocs
