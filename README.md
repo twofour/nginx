@@ -1,5 +1,9 @@
 # twofour/nginx
 
+## Usage
+
+    docker run -it --rm -p 80:80 -v $PWD:/var/www/html/htdocs twofour/nginx
+
 ## Environment variables
 
 ### NGINX_RESOLVERS
